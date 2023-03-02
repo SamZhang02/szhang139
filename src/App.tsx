@@ -1,5 +1,6 @@
 import React, { ReactComponentElement, useEffect, useState } from 'react';
 import './App.css';
+import { useSpring, animated } from "react-spring";
 import GitHubButton from 'react-github-btn';
 
 const MEDIAPATH = process.env.PUBLIC_URL + "/assets/"
@@ -11,6 +12,7 @@ function App() {
       <Header/>
       <Cursor/>
       <Projects/>
+      <TrademarkBar/>
     </div>
   );
 }
@@ -56,8 +58,10 @@ function Title() {
 
 function SubTitle(){
   return (
-    <div className="">
-      Computer Science and Statistics student at McGill University.
+    <div>
+      <div className="">
+        Computer Science and Statistics student at <span className='text-decoration-line: underline'>McGill University</span>.
+      </div>
     </div>
   )
 }
@@ -76,7 +80,7 @@ function ProjectBlock({title, image, imageGIF, desc, gitLink, projectLink}:{titl
   const [imageSrc, setImageSrc] = useState(image)
 
   return (
-  <div className='max-w-sm mx-auto bg-neutral-700 rounded-3xl shadow-lg flex-col'>
+  <div className='max-w-md max-h-fit mx-auto bg-neutral-700 rounded-3xl shadow-lg flex-col'>
     <p className="text-white p-6 text-3xl">{title}</p>
     <a href = {projectLink}>
       <img src={imageSrc} 
@@ -112,24 +116,42 @@ function ProjectLinks({gitLink}:{gitLink:string}){
 }
 
 function Cursor() {
-  const [mousePos, setMousePos] = useState({x:0, y:0})
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
-    document.addEventListener("mousemove", (event) => {
-      setMousePos({x:event.clientX, y:event.clientY}
-      )
-    })
-  }, [])
+    function handleMouseMove(event: { clientX: any; clientY: any; }) {
+      setMousePos({ x: event.clientX, y: event.clientY });
+    }
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  const cursorSpring = useSpring({
+    to: { left: `${mousePos.x}px`, top: `${mousePos.y}px` },
+    config: { tension: 2000, friction:400},
+  });
 
   return (
-    <div
-    id='cursor-shadow'
-    className='rounded-full'
-    style={{
-      top: mousePos.y,
-      left: mousePos.x,
-    }}
-    ></div>
-  )
+    <animated.div
+      id="cursor-shadow"
+      className="rounded-full"
+      style={cursorSpring}
+    ></animated.div>
+  );
+}
+
+function TrademarkBar() {
+  return (
+    <div className="bg-neutral-700 p-3 mt-10">
+      <div className="">
+        <div className="text-white">© 2023 Sam Zhang. All rights reserved</div>
+      </div>
+    </div>
+  );
 }
 
 export default App;
