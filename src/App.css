@@ -1,5 +1,19 @@
+@font-face {
+  font-family: 'Space Mono';
+  src: 
+    url("./Space_Mono/SpaceMono-Regular.ttf") format('truetype'),
+    url("./Space_Mono/SpaceMono-Bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
+  white-space: pre-wrap;
   text-align: center;
+  background-color: #252525;
+  font-family: "Space Mono";
+  position: relative;
+  z-index: 3;
 }
 
 .App-logo {
@@ -13,8 +27,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.App-header{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +37,27 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.project-page{
+  min-height: 100vh;
+  display: flex;
+  font-size: calc(5px + 2vmin);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#cursor-shadow{
+  background-color: white;
+  height: 500px;
+  aspect-ratio: 1;
+  position:fixed;
+  left:50%;
+  top: 50%; 
+  translate: -50% -50%;
+  background:linear-gradient(
+    to right,
+    rgb(127, 240, 255),
+    mediumpurple
+  );
+  z-index:-1;
+  filter: blur(175px);
+  opacity: 0.7;
 }
