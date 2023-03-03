@@ -9,6 +9,7 @@ function App() {
   return (
     <div 
     className="App z-10">
+      <Navbar/>
       <Header/>
       <Cursor/>
       <Projects/>
@@ -39,9 +40,7 @@ function Title() {
     onMouseEnter = {() => 
         interval = setInterval(() =>{
           setName(Name.split("").map((letter,index) => {
-              if (index < iterations) {
-                return letter
-              }
+              if (index < iterations) return letter
               return letters[Math.floor(Math.random()*26)]
             }).join(""))
             iterations += 1/3;
@@ -114,6 +113,13 @@ function ProjectLinks({gitLink}:{gitLink:string}){
 
   return <div className='p-4 pt-8 flex justify-evenly'>{out}</div>
 }
+
+function Navbar() {
+  return (
+    <div className="flex justify-end">
+      <a href="" className="text-white hover:scale-125 duration-150 p-5 pr-8 text-xl">Resume</a>
+    </div>
+)};
 
 function Cursor() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
