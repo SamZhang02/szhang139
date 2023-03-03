@@ -80,7 +80,7 @@ function ProjectBlock({title, image, imageGIF, desc, gitLink, projectLink}:{titl
   const [imageSrc, setImageSrc] = useState(image)
 
   return (
-  <div className='max-w-md max-h-fit mx-auto bg-neutral-700 rounded-3xl shadow-lg flex-col'>
+  <div className='project-block max-w-md max-h-fit mx-auto bg-neutral-700 rounded-3xl shadow-lg flex-col'>
     <p className="text-white p-6 text-3xl">{title}</p>
     <a href = {projectLink} target="_blank">
       <img src={imageSrc} 
