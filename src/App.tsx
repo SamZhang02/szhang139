@@ -81,7 +81,7 @@ function ProjectBlock({title, image, imageGIF, desc, gitLink, projectLink}:{titl
   return (
   <div className='max-w-md max-h-fit mx-auto bg-neutral-700 rounded-3xl shadow-lg flex-col'>
     <p className="text-white p-6 text-3xl">{title}</p>
-    <a href = {projectLink}>
+    <a href = {projectLink} target="_blank">
       <img src={imageSrc} 
       className='flex-1 justify-center items-center mx-auto' 
       onMouseEnter={() => setImageSrc(imageGIF)}
@@ -138,7 +138,7 @@ function Cursor() {
 
   const cursorSpring = useSpring({
     to: { left: `${mousePos.x}px`, top: `${mousePos.y}px` },
-    config: { tension: 2000, friction:400},
+    config: { tension: 2000, friction:800},
   });
 
   return (
