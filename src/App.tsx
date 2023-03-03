@@ -1,4 +1,4 @@
-import React, { ReactComponentElement, useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import './App.css';
 import { useSpring, animated } from "react-spring";
 import GitHubButton from 'react-github-btn';
@@ -118,7 +118,7 @@ function ProjectLinks({gitLink}:{gitLink:string}){
 function Navbar() {
   return (
     <div className="flex justify-end">
-      <a href="" className="text-white hover:scale-125 duration-150 p-5 pr-8 text-xl">Resume</a>
+      <a href="https://drive.google.com/drive/folders/1-iDhK3nd4s_Zr4dpg4jJuDEs_gz4ytW_?usp=share_link" className="text-white hover:scale-125 duration-150 p-5 pr-8 text-xl">Resume</a>
     </div>
 )};
 
