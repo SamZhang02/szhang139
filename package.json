@@ -44,5 +44,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.2.7"
-  }
+  },
+  "homepage": "https://cs.mcgill.ca/~szhang139"
 }
