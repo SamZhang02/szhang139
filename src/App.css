@@ -69,6 +69,7 @@
   z-index:-1;
   filter: blur(175px);
   opacity: 0.7;
+  animation: rotate 50s infinite;
 }
 
 @keyframes float {
@@ -84,5 +85,19 @@
 		box-shadow: 0 10px 15px 0px rgba(0,0,0,0.6);
 		transform: translatey(0px);
 	}
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  
+  50% {
+    scale: 1 1.5;
+  }
+  
+  to {
+    rotate: 360deg;
+  }
 }
 
