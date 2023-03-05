@@ -37,7 +37,7 @@ function Title() {
 
   return (
     <div 
-    className="text-8xl font-semibold m-5 hover:bg-white hover:text-neutral-700 "
+    className="text-8xl font-semibold m-5 hover:bg-white hover:text-neutral-700"
     onMouseEnter = {() => 
         interval = setInterval(() =>{
           setName(Name.split("").map((letter,index) => {
@@ -68,7 +68,7 @@ function SubTitle(){
 
 function Projects(){
   return (
-    <header className="project-page">
+    <header className="project-page whitespace-normal">
       <ProjectBlock title={"Droove"} image={MEDIAPATH + "droove.png"} imageGIF = {MEDIAPATH + "droove.png"} desc={"CodeJam12: Best Beginner Hack\nWeb-app that generates a smart itiniary with pre-determined rest-stops based on user inputs"} gitLink = {"https://github.com/SamZhang02/DrooVE"} projectLink = {"https://github.com/SamZhang02/DrooVE"}/>
       <ProjectBlock title={"STONK"} image={MEDIAPATH + "stonk.png"} imageGIF = {MEDIAPATH + "stonk.gif"} desc={"Discord bot that allows for query of live and historical stock market information in Discord chatrooms."} gitLink = {"https://github.com/SamZhang02/STONK"} projectLink = {"https://top.gg/bot/1048012729711087626"}/>
       <ProjectBlock title={"LaTeX Algorithms for Obsidian"} image={MEDIAPATH + "latex_algo.png"} imageGIF = {MEDIAPATH + "latex_algo.gif"} desc={"Simple plugin for the markdown editor \"Obsidian\" to facilitates the process of notetaking algorithms, pseudocodes and mathematical proofs."} gitLink = {"https://github.com/SamZhang02/obsidian-latex-algorithms"} projectLink = {"obsidian://show-plugin?id=latex-algorithms"}/>
@@ -81,7 +81,7 @@ function ProjectBlock({title, image, imageGIF, desc, gitLink, projectLink}:{titl
 
   return (
   <div className='project-block max-w-md max-h-fit mx-auto bg-neutral-700 rounded-3xl shadow-lg flex-col'>
-    <p className="text-white p-6 text-3xl">{title}</p>
+    <p className="text-white p-6 sm:text-xl text-3xl">{title}</p>
     <a href = {projectLink} target="_blank">
       <img src={imageSrc} 
       className='flex-1 justify-center items-center mx-auto' 
@@ -99,12 +99,12 @@ function ProjectBlock({title, image, imageGIF, desc, gitLink, projectLink}:{titl
 function ProjectLinks({gitLink}:{gitLink:string}){
   let out = [
     <GitHubButton href={gitLink}
-    data-color-scheme="no-preference: dark_dimmed; light: light; dark: dark_dimmed;" 
+    data-color-scheme="no-preference: dark_dimmed; light: dark_dimmed; dark: dark_dimmed;" 
     data-size='large'>
       Follow
     </GitHubButton>,
     <GitHubButton href={gitLink}
-    data-color-scheme="no-preference: dark_dimmed; light: light; dark: dark_dimmed;" 
+    data-color-scheme="no-preference: dark_dimmed; light: dark_dimmed; dark: dark_dimmed;" 
     data-icon="octicon-star" 
     data-show-count="true" 
     data-size='large'>

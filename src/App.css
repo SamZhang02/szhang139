@@ -42,10 +42,15 @@
   display: flex;
   font-size: calc(5px + 2vmin);
   color: white;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .project-block{
 		box-shadow: 0 10px 15px 0px rgba(0,0,0,0.6);
+    margin: 10px;
+    min-height: 760px;
 }
 
 .project-block:hover{
