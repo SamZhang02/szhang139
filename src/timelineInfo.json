@@ -1,0 +1,18 @@
+[
+  {
+    "date": "May. 2023 - Aug. 2023",
+    "company": "Meituan",
+    "companyLink": "https://meituan.com/",
+    "role": "Machine Learning Engineer Intern",
+    "desc": "Ads Recommendation System\nWorked on the Dianping app's CTR prediction model, aiming to improve the model's understanding of the ad itself and the ad-user context.",
+    "imagePath": "meituan.png"
+  },
+  {
+    "date": "Sept. 2023 - April. 2024",
+    "company": "Ceridian",
+    "companyLink": "https://ceridian.com/",
+    "role": "Incoming Software Developer Intern",
+    "desc": "To come...",
+    "imagePath": "ceridian.png"
+  }
+]

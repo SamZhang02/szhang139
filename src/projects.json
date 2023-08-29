@@ -1,0 +1,18 @@
+[
+  {
+    "title": "LaTeX Algorithms for Obsidian",
+    "imagePath": "latex_algo.png",
+    "imageGIFPath": "latex_algo.gif",
+    "desc": " Simple plugin for the markdown editor \"Obsidian\" to facilitates the process of notetaking algorithms, pseudocodes and mathematical proofs.",
+    "gitLink": "https://github.com/SamZhang02/obsidian-latex-algorithms",
+    "projectLink": "obsidian://show-plugin?id=latex-algorithms"
+  },
+  {
+    "title": "mcgill.courses",
+    "imagePath": "mcgill_courses.png",
+    "desc": "Open-sourced, ad-free search and review platform for courses offered and instructors teaching at McGill University",
+    "imageGIFPath": "mcgill_courses.png",
+    "gitLink": "https://github.com/terror/mcgill.courses",
+    "projectLink": "https://mcgill.courses/"
+  }
+]
