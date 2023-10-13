@@ -8,11 +8,11 @@
     "imagePath": "meituan.png"
   },
   {
-    "date": "Sept. 2023 - April. 2024",
+    "date": "Sept. 2023 - Apr. 2024",
     "company": "Ceridian",
     "companyLink": "https://ceridian.com/",
-    "role": "Incoming Software Developer Intern",
-    "desc": "To come...",
+    "role": "Software Developer Intern",
+    "desc": "Working full-stack on Dayforce, a global HCM application's position management features.",
     "imagePath": "ceridian.png"
   }
 ]
